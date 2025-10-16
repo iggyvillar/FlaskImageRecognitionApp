@@ -1,5 +1,5 @@
 """
-Handles image processing and sign prediction
+This handles the image processing and sign prediction
 Includes functions to process images and predict using the trained model.
 """
 

@@ -12,14 +12,14 @@ app = Flask(__name__)
 
 @app.route("/")
 def main():
-    """Render the homepage with the image upload form."""
+    """Renders the homepage with the image upload form."""
     return render_template("index.html")
 
 
 @app.route("/prediction", methods=["POST"])
 def predict_image_file():
     """
-    Handle image upload, processing, and prediction.
+    Handles the image upload, processing, and prediction.
     Returns the prediction result or error message.
     """
     try:
