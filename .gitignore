@@ -1,0 +1,7 @@
+# .gitignore
+__pycache__/
+*.pyc
+*.iml
+.idea/
+venv/
+venv310/

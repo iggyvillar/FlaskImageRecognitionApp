@@ -1,3 +1,8 @@
+"""
+Handles image processing and sign prediction
+Includes functions to process images and predict using the trained model.
+"""
+
 # Importing required libs
 from keras.models import load_model
 from keras.utils import img_to_array
@@ -10,6 +15,10 @@ model = load_model("digit_model.h5")
 
 # Preparing and pre-processing the image
 def preprocess_img(img_path):
+    """
+    This function resizes the image
+    and returns it in the desired corrected shape for the model
+    """
     op_img = Image.open(img_path)
     img_resize = op_img.resize((224, 224))
     img2arr = img_to_array(img_resize) / 255.0
@@ -19,5 +28,8 @@ def preprocess_img(img_path):
 
 # Predicting function
 def predict_result(predict):
+    """
+    This returns the predicted result
+    """
     pred = model.predict(predict)
     return np.argmax(pred[0], axis=-1)
