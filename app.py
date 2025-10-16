@@ -30,7 +30,7 @@ def predict_image_file():
 
     except Exception:
         return render_template(
-            "result.html", err="File cannot be processed or no file uploaded"
+            "result.html", err="No file uploaded"
         )
 
 
