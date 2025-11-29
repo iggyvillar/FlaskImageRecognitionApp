@@ -1,6 +1,6 @@
 """
 Assignment 4 - Demonstration Test File
-This test intentionally fails to show pipeline behavior
+NOW PASSING - Shows full pipeline execution
 """
 
 import pytest
@@ -8,20 +8,18 @@ import pytest
 
 def test_pipeline_stops_on_failure():
     """
-    AC: Demonstrate that failing unit tests prevent acceptance tests from running
+    AC: Demonstrate full pipeline execution when all tests pass
     
-    Given: The CI/CD pipeline has 4 sequential jobs
-    When: A unit test fails
-    Then: Integration and acceptance tests should be skipped
+    Given: All tests are passing
+    When: The pipeline runs
+    Then: All 4 jobs should execute successfully in order
     """
-    # INTENTIONAL FAILURE FOR DEMO
-    assert False, "This failure should stop the pipeline"
+    # FIXED - Now passes
+    assert True, "✅ Test fixed - full pipeline should execute"
 
 
 def test_this_one_passes():
     """
-    AC: This test demonstrates partial success
-    
-    Some tests can pass while others fail
+    AC: This test demonstrates success
     """
     assert True
