@@ -63,6 +63,7 @@ jobs:
           # Run your existing unit tests
           pytest tests/test_model.py -v --tb=short || pytest test_model.py -v --tb=short
           pytest tests/test_acceptance_edge_cases.py -v --tb=short || echo "Edge case tests completed"
+          pytest tests/test_demo_a4.py -v --tb=short
           echo " Unit tests completed"
 
   # Task 3: Happy + Sad Path Testing
